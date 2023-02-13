@@ -1,0 +1,28 @@
+<div class="main-form">
+  <form
+    action="{{ url_for('main.add') }}"
+    method="POST"
+    role="form"
+    class="form-inline"
+  >
+    <div class="input-group mb-4">
+      <input
+        name="add-todo"
+        type="text"
+        class="form-control"
+        placeholder="New todo"
+        aria-label="New Task"
+        aria-describedby="button-addon1"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="submit"
+          id="button-addon1"
+        >
+          Add
+        </button>
+      </div>
+    </div>
+  </form>
+</div>

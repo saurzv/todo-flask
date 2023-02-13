@@ -1,0 +1,32 @@
+{% include './header.html' %}
+
+<h1 class="heading">Edit To Do</h1>
+
+<div class="main-form">
+  <form
+    action="{{ url_for('main.edit', id=todo._id) }}"
+    method="POST"
+    role="form"
+    class="form-inline"
+  >
+    <div class="input-group mb-4">
+      <input
+        name="edited-todo"
+        type="text"
+        class="form-control"
+        value="{{ todo.text }}"
+        aria-label="New Task"
+        aria-describedby="button-addon1"
+      />
+      <div class="input-group-append">
+        <button
+          class="btn btn-outline-secondary"
+          type="submit"
+          id="button-addon1"
+        >
+          Edit
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
